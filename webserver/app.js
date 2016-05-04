@@ -63,7 +63,7 @@ app.use(function(err, req, res, next) {
 var Event = require('./models/Event.js');
 Event.find(function (err, events) {
       if (!events.length){
-        var array = [{"tags": ["code"], "location": "SimpleWeb", "attendees": ["Ben"], "user": "Ben"}, {"tags": ["eat"], "location": "SimpleWeb", "attendees": ["Simon"], "user": "Simon"}];
+        var array = [{"nsfw": true, "tags": ["code"], "location": "SimpleWeb", "attendees": ["Ben"], "user": "Ben"}, {"nsfw": false, "tags": ["eat"], "location": "SimpleWeb", "attendees": ["Simon"], "user": "Simon"}];
         Event.create(array, function (err) {
           if (err) {
 

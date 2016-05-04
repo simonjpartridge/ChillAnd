@@ -5,6 +5,7 @@ var EventSchema = new mongoose.Schema({
   attendees: [String],
   user: String,
   location: String,
+  nsfw: Boolean,
   updated_at: { type: Date, default: Date.now },
 });
 
