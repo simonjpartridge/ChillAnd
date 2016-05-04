@@ -18,7 +18,7 @@ class JoinChillCard extends React.Component {
 
 
     renderAllChills() {
-      var tempChill = [{"tags": ["code"], "location": "SimpleWeb", "user": "Ben"},{"tags": ["cod"], "location": "SimpleWeb", "user": "Ben"}];
+      var tempChill = [{"tags": ['"BBQ"'], "location": "SimpleWeb", "user": "Ben"},{"tags": ['Football'], "location": "Brandon Hill", "user": "Simon"},{"tags": ['"Netflix"'], "location": "Pub?", "user": "Rory"},{"tags": ["Park"], "location": "SimpleWeb", "user": "Ben"}];
       return $.map(tempChill,this.renderChill);
     };
 

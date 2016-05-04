@@ -14,12 +14,12 @@ class ChillOverview extends React.Component {
   constructor(props) {
     super(props);
     this.state = {imgUrl:""};
-    console.log("constructed");
+    //console.log("constructed");
   };
 
 
   componentDidMount() {
-    console.log('mounted');
+    //console.log('mounted');
     var self = this;
     var req = this.getImageWithName(this.props.info.tags[0]);
 
@@ -34,7 +34,7 @@ class ChillOverview extends React.Component {
 
 
   getImageWithName(name){
-    console.log('getting image');
+    //console.log('getting image');
       return $.getJSON("https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
       {
           tags: name,
@@ -45,7 +45,7 @@ class ChillOverview extends React.Component {
 
   renderChillTags(){
 
-    return this.props.info.tags[0];
+    return this.props.info.user;
   }
 
   renderChillImages(){
@@ -58,11 +58,11 @@ class ChillOverview extends React.Component {
 
     return (
       <Card>
-        <CardTitle title={this.props.info.tags[0]} subtitle={this.props.info.location} />
+        <CardTitle title={this.props.info.tags[0]} subtitle={'Location: ' +this.props.info.location} />
 
         <div>
           {this.renderChillImages()}
-          {this.renderChillTags()}
+          <p><h2>{this.renderChillTags()}</h2></p>
         </div>
 
       </Card>
