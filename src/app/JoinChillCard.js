@@ -17,7 +17,7 @@ class JoinChillCard extends React.Component {
 
 
     renderAllChills() {
-      var tempChill = [{"tags": ["code"], "location": "SimpleWeb", "user": "Ben"}];
+      var tempChill = [{"tags": ["code"], "location": "SimpleWeb", "user": "Ben"},{"tags": ["code"], "location": "SimpleWeb", "user": "Ben"}];
       return $.map(tempChill,this.renderChill);
     };
 
@@ -34,18 +34,14 @@ class JoinChillCard extends React.Component {
         // </CardActions>
 
     return (
-      <Card className={this.props.className}>
-        <CardHeader
-          title="Join a Chill"
-          subtitle="Chill &..."
-          avatar="http://lorempixel.com/100/100/nature/"
-        />
-        <CardTitle title="Card title" subtitle="Card subtitle" />
-        <CardText>
-          {this.renderAllChills()}
-        </CardText>
-
-      </Card>
+      <div>
+      <div className={this.props.className}>
+        <div className="join-header" >
+            <h1>Join a Chill</h1>
+        </div>
+      </div>
+        {this.renderAllChills()}
+      </div>
     );
 
   }
