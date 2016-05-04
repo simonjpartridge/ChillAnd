@@ -1,0 +1,19 @@
+{
+  "name": "chillinthepark",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simonjpartridge/chillinthepark.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simonjpartridge/chillinthepark/issues"
+  },
+  "homepage": "https://github.com/simonjpartridge/chillinthepark#readme"
+}
