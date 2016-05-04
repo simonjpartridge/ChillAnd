@@ -6,3 +6,8 @@ body {
   font-size: 13px;
   line-height: 20px;
 }
+
+.card{
+    padding-top:10px;
+    padding-bottom:10px;
+}
