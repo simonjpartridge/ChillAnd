@@ -22,3 +22,4 @@ function getImageWithName(name, imageContainer){
       });
   });
 }
+export default getImageWithName;
