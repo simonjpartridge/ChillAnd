@@ -34,7 +34,7 @@ class Main extends React.Component {
 
     this.state = {
       open: false,
-      title: "Main"
+      title: "Chill &"
     };
   }
 

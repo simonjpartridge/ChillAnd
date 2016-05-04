@@ -20,6 +20,7 @@ class StartChillCard extends React.Component {
         //   <FlatButton label="Action1" />
         //   <FlatButton label="Action2" />
         // </CardActions>
+        //        <CardTitle title="Card title" subtitle="Card subtitle" />
 
     return (
       <Card>
@@ -28,14 +29,6 @@ class StartChillCard extends React.Component {
           subtitle="Chill &..."
           avatar="http://lorempixel.com/100/100/nature/"
         />
-        <CardMedia>
-          <img src="http://lorempixel.com/600/337/nature/" />
-        </CardMedia>
-        <CardTitle title="Card title" subtitle="Card subtitle" />
-        <CardText>
-          Start a chill somewhere
-        </CardText>
-
       </Card>
     );
 
