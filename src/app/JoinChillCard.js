@@ -7,13 +7,24 @@ import CardTitle from 'material-ui/Card/CardTitle';
 import FlatButton from 'material-ui/FlatButton';
 import CardText from 'material-ui/Card/CardText';
 import ChillOverview from './ChillOverview';
+import $ from 'jquery';
 
 class JoinChillCard extends React.Component {
+
+    renderChill(chillInfo){
+      return (<ChillOverview info={chillInfo}/>)
+    };
+
+
+    renderAllChills() {
+      var tempChill = [{"tags": ["code"], "location": "SimpleWeb", "user": "Ben"}];
+      $.map(tempChill,this.renderChill);
+    };
 
 
 
   render (){
-    var tempChill= {"tags": ["code"], "location": "SimpleWeb", "user": "Ben"}
+
         // <CardMedia
         //   overlay={<CardTitle title="Overlay title" subtitle="Overlay subtitle" />}
         // >
@@ -31,7 +42,7 @@ class JoinChillCard extends React.Component {
         />
         <CardTitle title="Card title" subtitle="Card subtitle" />
         <CardText>
-          <ChillOverview info={tempChill}/>
+          {this.renderAllChills()}
         </CardText>
 
       </Card>
