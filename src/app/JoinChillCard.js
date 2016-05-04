@@ -7,7 +7,7 @@ import CardTitle from 'material-ui/Card/CardTitle';
 import FlatButton from 'material-ui/FlatButton';
 import CardText from 'material-ui/Card/CardText';
 
-class StartChillCard extends React.Component {
+class JoinChillCard extends React.Component {
 
 
 
@@ -43,4 +43,4 @@ class StartChillCard extends React.Component {
 
 }
 
-export default StartChillCard;
+export default JoinChillCard;

@@ -12,11 +12,11 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import StartChillCard from './StartChillCard';
+import JoinChillCard from './JoinChillCard';
 
 const styles = {
   container: {
-    textAlign: 'center',
-    paddingTop: 200,
+    textAlign: 'center'
   },
 };
 
@@ -66,7 +66,8 @@ class Main extends React.Component {
             title={this.state.title}
             iconClassNameRight="muidocs-icon-navigation-expand-more"
           />
-          <StartChillCard />
+          <StartChillCard className="card"/>
+          <JoinChillCard className="card"/>
         </div>
       </MuiThemeProvider>
     );
