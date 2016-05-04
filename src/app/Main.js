@@ -13,6 +13,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import StartChillCard from './StartChillCard';
 import JoinChillCard from './JoinChillCard';
+import CreateChill from './CreateChill';
 
 const styles = {
   container: {
@@ -68,6 +69,7 @@ class Main extends React.Component {
           />
           <StartChillCard className="card"/>
           <JoinChillCard className="card"/>
+          <CreateChill className="card"/>
         </div>
       </MuiThemeProvider>
     );
