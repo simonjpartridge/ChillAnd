@@ -7,17 +7,49 @@ import CardTitle from 'material-ui/Card/CardTitle';
 import FlatButton from 'material-ui/FlatButton';
 import CardText from 'material-ui/Card/CardText';
 import imageGetter from './imageGetter.js';
+import $ from 'jquery';
 
 class ChillOverview extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {imgUrl:""};
+    console.log("constructed");
+  };
+
+
+  componentDidMount() {
+    console.log('mounted');
+    var self = this;
+    var req = this.getImageWithName(this.props.info.tags[0]);
+
+    req.done(function(data){
+      console.log(data);
+      var theUrl = data.items[0].media.m;
+      console.log(theUrl);
+      self.setState({imgUrl:theUrl});
+      //self.setState({imgUrl:data[0]})
+    })
+  };
+
+
+  getImageWithName(name){
+    console.log('getting image');
+      return $.getJSON("https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
+      {
+          tags: name,
+          format: "json"
+      });
+    };
 
 
   renderChillTags(){
 
     return this.props.info.tags[0];
   }
+
   renderChillImages(){
-    var imgSRC =
-    return (<Img src={imgsrc}>);
+    return (<img src={this.state.imgUrl} />);
   }
 
 

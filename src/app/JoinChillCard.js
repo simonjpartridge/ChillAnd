@@ -11,13 +11,14 @@ import $ from 'jquery';
 
 class JoinChillCard extends React.Component {
 
+
     renderChill(chillInfo){
-      return (<ChillOverview info={chillInfo}/>);
+      return (<ChillOverview key={chillInfo.tags[0]}info={chillInfo}/>);
     };
 
 
     renderAllChills() {
-      var tempChill = [{"tags": ["code"], "location": "SimpleWeb", "user": "Ben"},{"tags": ["code"], "location": "SimpleWeb", "user": "Ben"}];
+      var tempChill = [{"tags": ["code"], "location": "SimpleWeb", "user": "Ben"},{"tags": ["cod"], "location": "SimpleWeb", "user": "Ben"}];
       return $.map(tempChill,this.renderChill);
     };
 
