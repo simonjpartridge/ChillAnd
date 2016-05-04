@@ -20,7 +20,7 @@ class ChillOverview extends React.Component {
 
     return (
       <Card>
-        <CardTitle title="{this.props.info.tags[0]}" subtitle={this.props.info.location} />
+        <CardTitle title={this.props.info.tags[0]} subtitle={this.props.info.location} />
         <div>
           {this.renderChillTags()}
         </div>
