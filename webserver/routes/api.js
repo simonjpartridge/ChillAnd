@@ -27,7 +27,12 @@ router.post('/create', function(req, res, next) {
     return;
   }
 
-  var event = new Event({tags: [req.query.tag], attendees: [req.query.user], user: req.query.user, location: req.query.location});
+  if(!req.query.nsfw) {
+    res.status(400).json({ error: 'missing nsfw param' });
+    return;
+  }
+
+  var event = new Event({nsfw: req.query.nsfw, tags: [req.query.tag], attendees: [req.query.user], user: req.query.user, location: req.query.location});
   event.save(event, function(err, event) {
     if(err) {
       res.status(500).json({ error: 'oops' });
