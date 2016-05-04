@@ -23,7 +23,7 @@ class StartChillCard extends React.Component {
         //        <CardTitle title="Card title" subtitle="Card subtitle" />
 
     return (
-      <Card>
+      <Card className={this.props.className}>
         <CardHeader
           title="Start a Chill"
           subtitle="Chill &..."
