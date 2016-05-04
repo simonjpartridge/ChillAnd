@@ -11,6 +11,7 @@ import FlatButton from 'material-ui/FlatButton';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
+import StartChillCard from './StartChillCard';
 
 const styles = {
   container: {
@@ -65,6 +66,7 @@ class Main extends React.Component {
             title={this.state.title}
             iconClassNameRight="muidocs-icon-navigation-expand-more"
           />
+          <StartChillCard />
         </div>
       </MuiThemeProvider>
     );
