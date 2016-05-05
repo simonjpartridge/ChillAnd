@@ -36,7 +36,7 @@ class Main extends React.Component {
 
     this.state = {
       open: false,
-      title: "Chill &"
+      title: "Chill &..."
     };
   }
 

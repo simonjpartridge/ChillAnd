@@ -12,21 +12,10 @@ class StartChillCard extends React.Component {
 
 
   render (){
-
-        // <CardMedia
-        //   overlay={<CardTitle title="Overlay title" subtitle="Overlay subtitle" />}
-        // >
-        //<CardActions>
-        //   <FlatButton label="Action1" />
-        //   <FlatButton label="Action2" />
-        // </CardActions>
-        //        <CardTitle title="Card title" subtitle="Card subtitle" />
-
     return (
       <Card className={this.props.className}>
         <CardHeader
           title="Start a Chill"
-          subtitle="Chill &..."
           avatar="http://lorempixel.com/100/100/nature/"
         />
       </Card>
